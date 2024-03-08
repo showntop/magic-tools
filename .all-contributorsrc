@@ -1,0 +1,18 @@
+{
+    "projectName": "MagicTools",
+    "projectOwner": "magic-tools",
+    "files": ["README.md"],
+    "imageSize": 100,
+    "contributorsPerLine": 7,
+    "contributors": [
+        {
+            "login": "showntop",
+            "name": "译译译",
+            "avatar_url": "",
+            "profile": "https://github.com/showntop",
+            "contributions": [
+                "code"
+            ]
+        }
+    ]
+}
