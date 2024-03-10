@@ -1,0 +1,32 @@
+component: http
+name: http-nuxtjs-enf8aSMzmx
+inputs:
+  src:
+    dist: ./
+    hook: npm run build
+    exclude:
+      - .env
+  faas:
+    runtime: Nodejs19.9.0
+    framework: nuxtjs
+    name: '${name}'
+    environments: []
+    eip: false
+    timeout: 3
+    memorySize: 512
+    tags: []
+    layers:
+      - name: '${output:${stage}:${app}:magic-tools2-layer.name}'
+        version: '${output:${stage}:${app}:magic-tools2-layer.version}'
+  apigw:
+    protocols:
+      - http
+      - https
+    timeout: 60
+    environment: release
+    customDomains: []
+  region: ap-nanjing
+  isAutoCiDeploy: false
+org: '1252214184'
+app: magic-tools2
+stage: prod
